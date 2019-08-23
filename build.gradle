@@ -15,7 +15,11 @@ task helloWorld(type: JavaExec) {
     classpath sourceSets.test.runtimeClasspath
     main = "first.helloWorld"
 }
-
+task launch(type: Test) {
+    useTestNG() {
+        include '**/login.class'
+    }
+}
 
 dependencies {
     testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
