@@ -17,6 +17,8 @@ public class login {
 //        driver.get("http://google.com");
         System.setProperty("webdriver.chrome.driver","./src/main/resources/driver/chromedriver");
         ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
         options.setExperimentalOption("useAutomationExtension", false);
         options.addArguments("start-maximized"); // open Browser in maximized mode
         WebDriver driver = new ChromeDriver(options);
