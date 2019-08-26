@@ -12,6 +12,7 @@ public class login {
 
         System.setProperty("webdriver.chrome.driver","./src/main/resources/driver/chromedriver");
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("http://google.com");
         Thread.sleep(3000);
         driver.quit();
